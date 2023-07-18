@@ -16,7 +16,7 @@ import pageObject.LoginPage;
 import pageObject.ProductPage;
 import pageObject.SearchPage1;
 
-public class TC1_product_Adding extends BaseClass {
+public class TC_LoginTest extends BaseClass {
 
 	String p1 = "creeper";
 
@@ -74,7 +74,7 @@ public class TC1_product_Adding extends BaseClass {
 				break;
 			}
 		}
-		
+
 		System.out.println(driver.findElement(By.xpath("//h1[@id=\"title\"]/span[@id=\"productTitle\"]")).getText());
 		System.out.println("Selecting the quanity by 3");
 		ac.selectDrop();
@@ -83,6 +83,7 @@ public class TC1_product_Adding extends BaseClass {
 		ac.deleteProductFromCart();
 
 		System.out.println("logging out from Amazon");
+		Thread.sleep(2000);
 		lp.LogoutPage();
 
 	}
